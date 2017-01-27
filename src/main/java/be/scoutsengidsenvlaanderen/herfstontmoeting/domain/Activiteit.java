@@ -14,11 +14,11 @@ public abstract class Activiteit {
     @Nullable abstract String location();
     abstract LocalDateTime startDateTime();
     @Nullable abstract LocalDateTime stopDateTime();
-    abstract ImmutableList<Keuze> keuzes();
+    abstract ImmutableList<Keuze> options();
 
     static Builder builder() {
         return new AutoValue_Activiteit.Builder()
-                .setKeuzes();
+                .setOptions();
     }
 
     @AutoValue.Builder
@@ -29,7 +29,7 @@ public abstract class Activiteit {
         abstract Builder setLocation(String value);
         abstract Builder setStartDateTime(LocalDateTime value);
         abstract Builder setStopDateTime(LocalDateTime value);
-        abstract Builder setKeuzes(Keuze... value);
+        abstract Builder setOptions(Keuze... value);
 
         abstract Activiteit build();
     }

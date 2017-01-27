@@ -4,7 +4,7 @@
     "name": "Aankomst",
     "description": "Aankomst en inschrijving",
     "startDateTime": "2017-08-25T19:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Vrijdag",
@@ -12,7 +12,7 @@
     "description": "Tentje opzetten, matje uitrollen",
     "location": "Gouwgrond",
     "startDateTime": "2017-08-25T20:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Vrijdag",
@@ -21,7 +21,7 @@
     "location": "KKG",
     "startDateTime": "2017-08-25T23:15",
     "stopDateTime": "2017-08-26T00:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Vrijdag",
@@ -29,7 +29,7 @@
     "description": "Scouteske avond met animo, kampvuur en café",
     "startDateTime": "2017-08-26T00:00",
     "stopDateTime": "2017-08-26T02:30",
-    "keuzes": [
+    "options": [
       {
         "name": "Lindy Hop",
         "location": "Hoofdpodium",
@@ -66,7 +66,7 @@
     "description": "Tijd om in je slaapzak te kruipen",
     "location": "Gouwgrond",
     "startDateTime": "2017-08-26T03:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Zaterdag",
@@ -74,7 +74,7 @@
     "description": "Opstaan en ontbijt op je gouwgrond",
     "location": "Gouwgrond",
     "startDateTime": "2017-08-26T09:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Zaterdag",
@@ -82,7 +82,7 @@
     "location": "Gouwgrond",
     "startDateTime": "2017-08-26T09:00",
     "stopDateTime": "2017-08-26T11:00",
-    "keuzes": []
+    "options": []
   },
   {
     "logicalGroup": "Zaterdag",
@@ -90,6 +90,6 @@
     "location": "KKG",
     "startDateTime": "2017-08-26T11:15",
     "stopDateTime": "2017-08-26T11:45",
-    "keuzes": []
+    "options": []
   }
 ]

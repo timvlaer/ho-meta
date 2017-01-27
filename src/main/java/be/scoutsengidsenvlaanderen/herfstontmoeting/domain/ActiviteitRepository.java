@@ -20,7 +20,7 @@ public class ActiviteitRepository {
             Activiteit.builder().setLogicalGroup(VRIJDAG).setName("Installeren").setDescription("Tentje opzetten, matje uitrollen").setLocation(GOUW_GROND).setStartDateTime(friday(20, 0)).build(),
             Activiteit.builder().setLogicalGroup(VRIJDAG).setName("Openingsshow").setDescription("Openingsshow op het grote podium").setLocation(KKG).setStartDateTime(friday(23, 15)).setStopDateTime(saturday(0, 0)).build(),
             Activiteit.builder().setLogicalGroup(VRIJDAG).setName("Scouteske avond").setDescription("Scouteske avond met animo, kampvuur en café").setStartDateTime(saturday(0, 0)).setStopDateTime(saturday(2, 30))
-                    .setKeuzes(
+                    .setOptions(
                             Keuze.builder().setName("Lindy Hop").setLocation("Hoofdpodium").setStartTime(LocalTime.of(0, 0)).build(),
                             Keuze.builder().setName("Scouteske zangavond").setLocation("Hoofdpodium").setStartTime(LocalTime.of(1, 0)).build(),
                             Keuze.builder().setName("Labyrjinth").setLocation("L341").build(),
