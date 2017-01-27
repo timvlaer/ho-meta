@@ -1,6 +1,7 @@
 package be.scoutsengidsenvlaanderen.herfstontmoeting.domain;
 
 import com.google.auto.value.AutoValue;
+import com.google.common.collect.ImmutableList;
 
 import javax.annotation.Nullable;
 import java.time.LocalDateTime;
@@ -13,9 +14,11 @@ public abstract class Activiteit {
     @Nullable abstract String location();
     abstract LocalDateTime startDateTime();
     @Nullable abstract LocalDateTime stopDateTime();
+    abstract ImmutableList<Keuze> keuzes();
 
     static Builder builder() {
-        return new AutoValue_Activiteit.Builder();
+        return new AutoValue_Activiteit.Builder()
+                .setKeuzes();
     }
 
     @AutoValue.Builder
@@ -26,6 +29,7 @@ public abstract class Activiteit {
         abstract Builder setLocation(String value);
         abstract Builder setStartDateTime(LocalDateTime value);
         abstract Builder setStopDateTime(LocalDateTime value);
+        abstract Builder setKeuzes(Keuze... value);
 
         abstract Activiteit build();
     }

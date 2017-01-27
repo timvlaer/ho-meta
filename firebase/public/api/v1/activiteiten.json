@@ -3,14 +3,16 @@
     "logicalGroup": "Vrijdag",
     "name": "Aankomst",
     "description": "Aankomst en inschrijving",
-    "startDateTime": "2017-08-25T19:00"
+    "startDateTime": "2017-08-25T19:00",
+    "keuzes": []
   },
   {
     "logicalGroup": "Vrijdag",
     "name": "Installeren",
     "description": "Tentje opzetten, matje uitrollen",
     "location": "Gouwgrond",
-    "startDateTime": "2017-08-25T20:00"
+    "startDateTime": "2017-08-25T20:00",
+    "keuzes": []
   },
   {
     "logicalGroup": "Vrijdag",
@@ -18,20 +20,76 @@
     "description": "Openingsshow op het grote podium",
     "location": "KKG",
     "startDateTime": "2017-08-25T23:15",
-    "stopDateTime": "2017-08-26T00:00"
+    "stopDateTime": "2017-08-26T00:00",
+    "keuzes": []
   },
   {
     "logicalGroup": "Vrijdag",
     "name": "Scouteske avond",
     "description": "Scouteske avond met animo, kampvuur en café",
     "startDateTime": "2017-08-26T00:00",
-    "stopDateTime": "2017-08-26T02:30"
+    "stopDateTime": "2017-08-26T02:30",
+    "keuzes": [
+      {
+        "name": "Lindy Hop",
+        "location": "Hoofdpodium",
+        "startTime": "00:00"
+      },
+      {
+        "name": "Scouteske zangavond",
+        "location": "Hoofdpodium",
+        "startTime": "01:00"
+      },
+      {
+        "name": "Labyrjinth",
+        "location": "L341"
+      },
+      {
+        "name": "Hoppercafé met karaoke",
+        "location": "K10",
+        "startTime": "00:00"
+      },
+      {
+        "name": "Hoppercafé met volksdans",
+        "location": "K10",
+        "startTime": "01:00"
+      },
+      {
+        "name": "Pijl en boog",
+        "location": "LK10"
+      }
+    ]
   },
   {
     "logicalGroup": "Vrijdag",
     "name": "Slaapwel",
     "description": "Tijd om in je slaapzak te kruipen",
     "location": "Gouwgrond",
-    "startDateTime": "2017-08-26T03:00"
+    "startDateTime": "2017-08-26T03:00",
+    "keuzes": []
+  },
+  {
+    "logicalGroup": "Zaterdag",
+    "name": "Opstaan",
+    "description": "Opstaan en ontbijt op je gouwgrond",
+    "location": "Gouwgrond",
+    "startDateTime": "2017-08-26T09:00",
+    "keuzes": []
+  },
+  {
+    "logicalGroup": "Zaterdag",
+    "name": "Gouw- en districtsmoment",
+    "location": "Gouwgrond",
+    "startDateTime": "2017-08-26T09:00",
+    "stopDateTime": "2017-08-26T11:00",
+    "keuzes": []
+  },
+  {
+    "logicalGroup": "Zaterdag",
+    "name": "Opening van de dag",
+    "location": "KKG",
+    "startDateTime": "2017-08-26T11:15",
+    "stopDateTime": "2017-08-26T11:45",
+    "keuzes": []
   }
 ]
