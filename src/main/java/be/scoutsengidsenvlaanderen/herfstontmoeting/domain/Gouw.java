@@ -1,24 +1,18 @@
 package be.scoutsengidsenvlaanderen.herfstontmoeting.domain;
 
-public class Gouw {
-    private String name;
-    private String location;
+import com.google.auto.value.AutoValue;
 
-    public Gouw(String name, String location) {
-        this.name = name;
-        this.location = location;
-    }
+@AutoValue
+public abstract class Gouw {
+    abstract String name();
+    abstract String location();
 
-    public String getName() {
-        return name;
-    }
-
-    public String getLocation() {
-        return location;
+    static Gouw create(String name, String location) {
+        return new AutoValue_Gouw(name, location);
     }
 
     public String getIdentifier() {
-        return name.toLowerCase()
+        return name().toLowerCase()
                 .replaceAll("\\p{Zs}", "-")
                 .replaceAll("[^0-9a-zA-Z\\-]", "");
     }

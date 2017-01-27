@@ -1,0 +1,37 @@
+[
+  {
+    "logicalGroup": "Vrijdag",
+    "name": "Aankomst",
+    "description": "Aankomst en inschrijving",
+    "startDateTime": "2017-08-25T19:00"
+  },
+  {
+    "logicalGroup": "Vrijdag",
+    "name": "Installeren",
+    "description": "Tentje opzetten, matje uitrollen",
+    "location": "Gouwgrond",
+    "startDateTime": "2017-08-25T20:00"
+  },
+  {
+    "logicalGroup": "Vrijdag",
+    "name": "Openingsshow",
+    "description": "Openingsshow op het grote podium",
+    "location": "KKG",
+    "startDateTime": "2017-08-25T23:15",
+    "stopDateTime": "2017-08-26T00:00"
+  },
+  {
+    "logicalGroup": "Vrijdag",
+    "name": "Scouteske avond",
+    "description": "Scouteske avond met animo, kampvuur en café",
+    "startDateTime": "2017-08-26T00:00",
+    "stopDateTime": "2017-08-26T02:30"
+  },
+  {
+    "logicalGroup": "Vrijdag",
+    "name": "Slaapwel",
+    "description": "Tijd om in je slaapzak te kruipen",
+    "location": "Gouwgrond",
+    "startDateTime": "2017-08-26T03:00"
+  }
+]

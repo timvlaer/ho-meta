@@ -4,16 +4,26 @@
   },
   "hosting": {
     "public": "public",
-    "rewrites": [{
-      "source": "/api/v1/gouwen",
-      "destination": "/api/v1/gouwen.json"
-    }],
-    "headers": [{
-      "source": "**/*.@(json)",
-      "headers": [{
-        "key": "Content-Type",
-        "value": "application/json"
-      }]
-    }]
+    "rewrites": [
+      {
+        "source": "/api/v1/gouwen",
+        "destination": "/api/v1/gouwen.json"
+      },
+      {
+        "source": "/api/v1/activities",
+        "destination": "/api/v1/activities.json"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(json)",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    ]
   }
 }
