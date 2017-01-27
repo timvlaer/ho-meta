@@ -6,17 +6,17 @@ import java.time.LocalDateTime;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ActivityTest {
+public class ActiviteitTest {
 
     @Test
     public void testBuilder() {
-        Activity activity = Activity.builder()
+        Activiteit activiteit = Activiteit.builder()
                 .setLogicalGroup("Vrijdag")
                 .setName("test")
                 .setStartDateTime(LocalDateTime.now())
                 .setStopDateTime(LocalDateTime.now())
                 .build();
-        assertThat(activity.name()).isEqualTo("test");
+        assertThat(activiteit.name()).isEqualTo("test");
     }
 
 }

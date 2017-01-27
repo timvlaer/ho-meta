@@ -1,7 +1,7 @@
 package be.scoutsengidsenvlaanderen.herfstontmoeting;
 
-import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Activity;
-import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.ActivityRepository;
+import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Activiteit;
+import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.ActiviteitRepository;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Gouw;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.GouwRepository;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.json.DateTimeSerializer;
@@ -41,8 +41,8 @@ public class GenerateStaticFiles {
         List<Gouw> gouwen = new GouwRepository().getGouwen();
         Files.write(gson.toJson(gouwen), new File(this.outputFile, "gouwen.json"), Charsets.UTF_8);
 
-        List<Activity> activities = new ActivityRepository().getActivities();
-        Files.write(gson.toJson(activities), new File(this.outputFile, "activities.json"), Charsets.UTF_8);
+        List<Activiteit> activities = new ActiviteitRepository().getActivities();
+        Files.write(gson.toJson(activities), new File(this.outputFile, "activiteiten.json"), Charsets.UTF_8);
     }
 
 }

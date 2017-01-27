@@ -15,18 +15,18 @@
       }
 
       #message {
-        max-width: 400px;
+        max-width: 900px;
         margin: 40px auto;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
         border-radius: 2px;
         background: white;
-        padding: 16px 24px;
+        padding: 32px;
       }
 
       #message h1 {
         font-size: 22px;
         font-weight: 500;
-        text-align: center;
+        text-align: left;
         margin: 0 0 16px;
       }
 
@@ -39,13 +39,15 @@
         list-style: none;
         margin: 16px 0 0;
         padding: 0;
-        text-align: center;
+      }
+
+      #message ul li {
+        padding: 12px 0;
       }
 
       #message li a {
         display: inline-block;
         padding: 8px;
-        text-transform: uppercase;
         text-decoration: none;
         font-weight: 500;
         background: rgb(3,155,229);
@@ -54,15 +56,18 @@
         border-radius: 3px;
         font-size: 14px;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+        font-family: monospace;
+        margin-right: 1em;
       }
     </style>
   </head>
   <body>
     <div id="message">
       <h1>Herfstontmoeting API</h1>
-      <p>Available methods:</p>
+      <p>Beschikbare methodes:</p>
       <ul>
-        <li><a href="/api/v1/gouwen">/api/v1/gouwen</a> List all regions with their location.</li>
+        <li><a href="/api/v1/gouwen">/api/v1/gouwen</a> Lijst van alle gouwen met hun kampeergrond op herfstontmoeting.</li>
+        <li><a href="/api/v1/activiteiten">/api/v1/activiteiten</a> Het volledige programma van herfstontmoeting.</li>
       </ul>
     </div>
   </body>

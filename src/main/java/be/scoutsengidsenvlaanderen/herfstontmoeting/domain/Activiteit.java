@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 import java.time.LocalDateTime;
 
 @AutoValue
-public abstract class Activity {
+public abstract class Activiteit {
     abstract String logicalGroup();
     abstract String name();
     @Nullable abstract String description();
@@ -15,7 +15,7 @@ public abstract class Activity {
     @Nullable abstract LocalDateTime stopDateTime();
 
     static Builder builder() {
-        return new AutoValue_Activity.Builder();
+        return new AutoValue_Activiteit.Builder();
     }
 
     @AutoValue.Builder
@@ -27,7 +27,7 @@ public abstract class Activity {
         abstract Builder setStartDateTime(LocalDateTime value);
         abstract Builder setStopDateTime(LocalDateTime value);
 
-        abstract Activity build();
+        abstract Activiteit build();
     }
 
 

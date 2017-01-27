@@ -10,8 +10,8 @@
         "destination": "/api/v1/gouwen.json"
       },
       {
-        "source": "/api/v1/activities",
-        "destination": "/api/v1/activities.json"
+        "source": "/api/v1/activiteiten",
+        "destination": "/api/v1/activiteiten.json"
       }
     ],
     "headers": [
