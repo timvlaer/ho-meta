@@ -4,15 +4,17 @@ REST Api with metadata for the start event of Scouts en Gidsen Vlaanderen, [Herf
 ## Static file hosting with firebase (current implementation)
 See firebase directory, files hosted with redirection on [Firebase](https://herfstontmoeting-7d97e.firebaseapp.com/)
 
-Generate the static file api using `gradle generateApi`. This program will put the generated files in `firebase/public/api`.
+### Generate and upload the static files to Firebase
+1. `gradle generateFirebaseApi`, this command will generate json-files in `firebase/public/api`.
+2. `cd firebase`
+3. `firebase deploy --only hosting`, will upload the static files to [Firebase](https://herfstontmoeting-7d97e.firebaseapp.com/).
 
-### Upload the static files to Firebase
-1. `cd firebase`
-2. `firebase deploy --only hosting`
+--------------
 
 ## Java Implementation (for future usage)
-* [x] `/api/v1/gouwen`: retrieve a [list of all regions](https://herfstontmoeting-7d97e.firebaseapp.com/api/v1/gouwen) with their name and location on the event
-* [ ] :wrench: `/api/v1/activities`: the program of the weekend
+* [x] `/api/v1/gouwen`
+* [ ] `/api/v1/activiteiten`
+* [ ] `/api/v1/locaties`
 
 ### Technology
 
