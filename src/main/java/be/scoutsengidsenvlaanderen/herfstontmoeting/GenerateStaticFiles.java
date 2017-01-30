@@ -4,29 +4,21 @@ import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Activiteit;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.ActiviteitRepository;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Gouw;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.GouwRepository;
-import be.scoutsengidsenvlaanderen.herfstontmoeting.json.LocalDateTimeSerializer;
-import be.scoutsengidsenvlaanderen.herfstontmoeting.json.LocalTimeSerializer;
+import be.scoutsengidsenvlaanderen.herfstontmoeting.json.GsonConfiguration;
 import com.google.common.base.Charsets;
 import com.google.common.base.Strings;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 import static com.google.common.base.Preconditions.checkState;
 
 public class GenerateStaticFiles {
 
-    private final Gson gson = new GsonBuilder()
-            .setPrettyPrinting()
-            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer())
-            .registerTypeAdapter(LocalTime.class, new LocalTimeSerializer())
-            .create();
+    private final Gson gson = new GsonConfiguration().getGson();
 
     private final File outputFile;
 

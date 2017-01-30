@@ -45,3 +45,10 @@ task generateFirebaseApi(type: JavaExec) {
     main = "be.scoutsengidsenvlaanderen.herfstontmoeting.GenerateStaticFiles"
     args 'firebase/public/api/v1'
 }
+
+task runServer(type: JavaExec) {
+    dependsOn test
+    classpath sourceSets.main.runtimeClasspath
+    main = "be.scoutsengidsenvlaanderen.herfstontmoeting.Start"
+    args '8888'
+}
