@@ -1,16 +1,19 @@
 package be.scoutsengidsenvlaanderen.herfstontmoeting;
 
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.ActiviteitRepository;
+import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.Gouw;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.domain.GouwRepository;
 import be.scoutsengidsenvlaanderen.herfstontmoeting.json.GsonConfiguration;
 import com.google.gson.Gson;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.http.HttpServerOptions;
+import io.vertx.core.http.HttpServerResponse;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class RestApi extends AbstractVerticle {
 
@@ -33,6 +36,7 @@ public class RestApi extends AbstractVerticle {
 
         router.route().handler(BodyHandler.create());
         router.get(API_BASE_PATH + "/gouwen").handler(this::listGouwen);
+        router.get(API_BASE_PATH + "/gouwen/:gouwId").handler(this::getGouw);
         router.get(API_BASE_PATH + "/activiteiten").handler(this::listActiviteiten);
 
         HttpServerOptions httpServerOptions = new HttpServerOptions();
@@ -43,15 +47,31 @@ public class RestApi extends AbstractVerticle {
     }
 
     private void listGouwen(RoutingContext routingContext) {
-        routingContext.response()
-                .putHeader("content-type", "application/json")
-                .end(gson.toJson(gouwRepository.getGouwen()));
+        returnJson(routingContext.response(), gouwRepository.getGouwen());
+    }
+
+    private void getGouw(RoutingContext routingContext) {
+        String gouwId = routingContext.pathParam("gouwId");
+        Optional<Gouw> gouw = gouwRepository.findGouw(gouwId);
+        if(gouw.isPresent()) {
+            returnJson(routingContext.response(), gouw.get());
+        } else {
+            returnResourceNotFound(routingContext.response());
+        }
     }
 
     private void listActiviteiten(RoutingContext routingContext) {
-        routingContext.response()
+        returnJson(routingContext.response(), activiteitRepository.getActivities());
+    }
+
+    private void returnJson(HttpServerResponse httpServerResponse, Object o) {
+        httpServerResponse
                 .putHeader("content-type", "application/json")
-                .end(gson.toJson(activiteitRepository.getActivities()));
+                .end(gson.toJson(o));
+    }
+
+    private void returnResourceNotFound(HttpServerResponse response) {
+        response.setStatusCode(404).end();
     }
 
 }

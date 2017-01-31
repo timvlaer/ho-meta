@@ -1,8 +1,12 @@
 package be.scoutsengidsenvlaanderen.herfstontmoeting.domain;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;
+import java.util.Optional;
+
+import static com.google.common.base.Preconditions.checkArgument;
 
 public class GouwRepository {
 
@@ -23,5 +27,12 @@ public class GouwRepository {
 
     public List<Gouw> getGouwen() {
         return gouwen;
+    }
+
+    public Optional<Gouw> findGouw(String gouwId) {
+        checkArgument(!Strings.isNullOrEmpty(gouwId), "Provide a valid identifier");
+        return gouwen.stream()
+                .filter(g -> gouwId.equals(g.getIdentifier()))
+                .findFirst();
     }
 }
